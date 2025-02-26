@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+body {
+  background-color: var(--color-green-200);
+}
+
+/* @theme {
+    
+} */
+
+@layer base {
+  h1 {
+    @apply text-2xl text-green-800 font-mono font-extrabold;
+  }
+
+  p {
+    @apply text-sm text-green-900 font-mono;
+  }
+
+  button {
+  }
+
+  a {
+    .active {
+      @apply text-white;
+    }
+  }
+
+  checkbox {
+    @apply accent-green-700;
+  }
+}
+
+@layer components {
+  .content {
+    @apply w-full mt-18 p-4;
+  }
+
+  .navlink {
+    @apply font-mono text-xl;
+  }
+
+  .construction {
+    @apply max-w-[600px] m-auto;
+  }
+}

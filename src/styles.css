@@ -33,14 +33,22 @@ body {
 
 @layer components {
   .content {
-    @apply w-full mt-18 p-4;
+    @apply w-full mt-18 md:p-4;
   }
 
   .navlink {
     @apply font-mono text-xl;
   }
 
+  .home-link {
+    @apply flex bg-cover bg-center bg-no-repeat w-full h-48 transition-all duration-300 ease-in-out opacity-100 hover:opacity-80 md:h-1/3;
+  }
+
   .construction {
     @apply max-w-[600px] m-auto;
   }
+}
+
+@utility h-screen-minus-header {
+  height: calc(100vh - var(--spacing) * 26);
 }

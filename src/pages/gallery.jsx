@@ -1,4 +1,4 @@
-import construction from "../assets/construction.svg";
+import construction from "../assets/img/construction.svg";
 
 function Gallery() {
   return (

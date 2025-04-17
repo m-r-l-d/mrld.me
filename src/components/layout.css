@@ -2,6 +2,18 @@ main {
   height: calc(100vh - 182px);
 }
 
+dialog {
+    /* display: block; */
+    position: absolute;
+    z-index: 99;
+    border: 0;
+}
+
+dialog::backdrop {
+    color: green;
+}
+
+
 @media only screen and (max-width: 640px) {
   main {
     height: 100%;

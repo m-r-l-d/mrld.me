@@ -27,9 +27,18 @@ const AboutDialog = ({ ref, setInactive }) => {
         </p>
         <p>I'm always trying to learn something new or make something cool!</p>
         <p>This website is still very much a work in progress!</p>
+        <p>
+          View the source code here:{" "}
+          <a href="https://github.com/m-r-l-d/mrld.me" target="_blank">
+            github.com/m-r-l-d/mrld.me
+          </a>
+        </p>
         <h4>Credits</h4>
         <p>
-          Built using the <a href="https://jdan.github.io/98.css/">98.css</a>{" "}
+          Built using the{" "}
+          <a href="https://jdan.github.io/98.css/" target="_blank">
+            98.css
+          </a>{" "}
           design system -- check out the project, it's awesome.
         </p>
       </div>
@@ -67,6 +76,9 @@ const ContactDialog = ({ ref, setInactive }) => {
       <div className="window-body">
         <h3>Contact</h3>
         <p>emeraldbay53@gmail.com</p>
+        <a href="https://github.com/m-r-l-d" target="_blank">
+          https://github.com/m-r-l-d
+        </a>
       </div>
       <div className="button-wrapper">
         <button

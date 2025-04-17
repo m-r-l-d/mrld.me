@@ -12,8 +12,7 @@ function Header() {
           MRLD
         </Link>
         <div className="title-bar-controls">
-          <button aria-label="Help" disabled></button>
-          <button aria-label="Close" disabled></button>
+          <button aria-label="Help"></button>
         </div>
       </div>
     </div>

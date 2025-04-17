@@ -1,6 +1,7 @@
 import Header from "./Header";
-import {useState, useEffect} from "react";
-import { Outlet, NavLink, useLocation } from "react-router";
+import Footer from "./Footer"
+import { Outlet, Link, useLocation } from "react-router";
+import "./layout.css"
 
 function Layout() {
   // workaround for active link status on parent element
@@ -14,24 +15,22 @@ function Layout() {
       <div className="window-body">
         <menu role="tablist">
           <li role="tab" aria-selected={pathname === '/'}>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li role="tab" aria-selected={pathname === '/gallery'}>
-            <a href="gallery">Gallery</a>
+            <Link to="gallery">Gallery</Link>
           </li>
           <li role="tab" aria-selected={pathname === '/tools'}>
-            <a href="tools">Tools</a>
-          </li>
-          <li role="tab" aria-selected={pathname === '/about'}>
-            <a href="about">About</a>
+            <Link to="tools">Tools</Link>
           </li>
         </menu>
         <div className="window" role="tabpanel">
-          <div className="window-body">
+          <main className="window-body">
             <Outlet />
-          </div>
+          </main>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

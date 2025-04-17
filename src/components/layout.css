@@ -1,0 +1,9 @@
+main {
+  height: calc(100vh - 182px);
+}
+
+@media only screen and (max-width: 640px) {
+  main {
+    height: 100%;
+  }
+}

@@ -3,7 +3,7 @@ import construction from "../assets/img/construction.svg";
 function Tools() {
   return (
     <div>
-      <h1>Tools</h1>
+      <h2>Tools</h2>
       <img
         src={construction}
         className="construction"

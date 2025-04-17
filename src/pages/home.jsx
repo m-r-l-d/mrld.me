@@ -9,7 +9,7 @@ function Home() {
       <div className="window">
         <div className="window-body">
           <Link to={to}>
-            <h3>{title}</h3>
+            <h4>{title}</h4>
           </Link>
         </div>
       </div>
@@ -20,12 +20,15 @@ function Home() {
     <div className="home-container">
       <div className="home-left sunken-panel"></div>
       <div className="home-right">
-        <h2>Welcome!</h2>
+        <h2>mrld.me</h2>
         <p>
           This is a place where you can check out some of my stuff. I do a lot
           of stuff!
         </p>
-        <LinkPanel title="Gallery" to="/gallery"/>
+        <div className="link-container">
+          <LinkPanel title="Gallery" to="/gallery" />
+          <LinkPanel title="Tools" to="/tools" />
+        </div>
       </div>
     </div>
   );

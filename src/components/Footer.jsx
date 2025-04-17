@@ -1,8 +1,11 @@
+import "./footer.css"
+
 function Footer() {
   return (
-    <>
-      <p className="hidden">This is the footer</p>
-    </>
+    <div className="button-wrapper">
+      <button>About</button>
+      <button className="default">Contact</button>
+    </div>
   );
 }
 

@@ -26,7 +26,13 @@ body {
 
 h1, h2, h3, h4 {
   font-family: Arial;
-  margin: 1rem 0
+  margin: 8px 0
+}
+
+@media only screen and (max-width: 640px) {
+  .main-window {
+    height: 100%;
+  }
 }
 
 /*

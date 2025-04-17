@@ -4,6 +4,8 @@
 
 .home-left {
   flex: 1;
+  max-width: 200px;
+  height: calc(100vh - 182px);
   background-image: url("../assets/img/home/tools.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,29 +20,34 @@
 }
 
 .link-container {
-    display: block;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  column-gap: 8px;
+  row-gap: 8px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 640px) {
+  .home-container {
+    display: block;
+  }
 
-    .home-container {
-        display: block;
-      }
+  .home-left {
+    height: calc(100vw - 64px);
+    max-width: 100%;
+  }
 
-    .home-left {
-        height: calc(100vw - 64px);
-    }
+  .home-right {
+    padding-left: 0;
+  }
 
-    .home-right {
-        padding-left: 0;
-    }
-
-    .link-container {
-        display: flex;
-    }
-
+  .link-container {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 8px;
+  }
 }

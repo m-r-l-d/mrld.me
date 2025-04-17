@@ -1,0 +1,18 @@
+.button-wrapper {
+  padding: 2px 8px 8px;
+  justify-content: end;
+  display: flex;
+}
+
+button.default {
+  box-shadow:
+    inset -2px -2px #0a0a0a,
+    inset 1px 1px #0a0a0a,
+    inset 2px 2px #fff,
+    inset -3px -3px grey,
+    inset 3px 3px #dfdfdf;
+}
+
+button + button {
+  margin-left: 4px;
+}

@@ -1,14 +1,19 @@
 /* @import "tailwindcss";
 
-*/ 
+*/
+html {
+  height: 100%;
+}
 
 body {
-  background-color: seagreen;
   margin: 32px;
+  background: linear-gradient(black, seagreen);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .title-bar {
-  background: linear-gradient(90deg, darkgreen, green);
+  background: linear-gradient(90deg, rgb(27, 86, 53), seagreen);
 }
 
 .title-bar-text {
@@ -24,9 +29,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: Arial;
-  margin: 8px 0
+  margin: 8px 0;
 }
 
 @media only screen and (max-width: 640px) {

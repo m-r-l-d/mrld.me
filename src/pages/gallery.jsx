@@ -8,7 +8,7 @@ function Gallery() {
         src={construction}
         className="construction"
         alt="under construction"
-        style={{height: '50%', margin: "auto"}}
+        style={{ height: "50%", margin: "auto" }}
       />
     </>
   );

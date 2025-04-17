@@ -1,14 +1,41 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
+
+*/ 
 
 body {
-  background-color: var(--color-green-200);
+  background-color: seagreen;
+  margin: 32px;
 }
+
+.title-bar {
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+.title-bar-text {
+  text-decoration: none;
+}
+
+.main-window {
+  height: calc(100vh - 70px);
+}
+
+.content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: Arial;
+  margin: 1rem 0
+}
+
+/*
 
 /* @theme {
     
 } */
 
-@layer base {
+/* @layer base {
   h1 {
     @apply text-2xl text-green-800 font-mono font-extrabold;
   }
@@ -51,4 +78,4 @@ body {
 
 @utility h-screen-minus-header {
   height: calc(100vh - var(--spacing) * 26);
-}
+} */

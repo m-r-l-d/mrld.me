@@ -1,36 +1,49 @@
 import { Link } from "react-router";
+import "./home.css";
 
 function Home() {
-  return (
-    <div className="block w-full md:flex">
-      <div className="grid bg-[url('./assets/img/home/123.png')] w-screen h-[100vw] bg-cover bg-center bg-no-repeat md:w-[50vw] md:h-screen-minus-header">
-        <h1 className="mx-auto mt-auto text-white text-4xl">Welcome!</h1>
-        <h2 className="font-mono mx-auto text-white text-l">
-          This is the place I keep all my stuff.
-        </h2>
+  const LinkPanel = (props) => {
+    const { title, to } = props;
+
+    return (
+      <div className="window">
+        <div className="window-body">
+          <Link to={to}>
+            <h3>{title}</h3>
+          </Link>
+        </div>
       </div>
-      <div className="w-full md:w-[50%]">
-        <Link
-          to="/gallery"
-          className="home-link bg-[url('./assets/img/home/gallery.png')]"
-        >
-          <h1 className="my-auto ml-10 text-white text-4xl">Gallery</h1>
-        </Link>
-        <Link
-          to="/tools"
-          className="home-link bg-[url('./assets/img/home/tools.png')]"
-        >
-          <h1 className="my-auto ml-10 text-white text-4xl">Tools</h1>
-        </Link>
-        <Link
-          to="/about"
-          className="home-link bg-[url('./assets/img/home/about.png')]"
-        >
-          <h1 className="my-auto ml-10 text-white text-4xl">About</h1>
-        </Link>
+    );
+  };
+
+  return (
+    <div className="home-container">
+      <div className="home-left sunken-panel"></div>
+      <div className="home-right">
+        <h2>Welcome!</h2>
+        <p>
+          This is a place where you can check out some of my stuff. I do a lot
+          of stuff!
+        </p>
+        <LinkPanel title="Gallery" to="/gallery"/>
       </div>
     </div>
   );
 }
 
 export default Home;
+
+{
+  /* <div>
+            <a href="/gallery" className="">Gallery</a>
+          </div>
+          <Link to="/tools" className="window">
+            <h1 className="">Tools</h1>
+          </Link>
+          <Link to="/about" className="window">
+            <h1 className="">About</h1>
+          </Link>
+        <div className="link-container">
+          
+        </div> */
+}

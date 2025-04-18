@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./home.css";
+import "./pages.css";
 
 function Home() {
   const LinkPanel = (props) => {

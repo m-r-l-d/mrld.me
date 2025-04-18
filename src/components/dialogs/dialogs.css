@@ -1,0 +1,10 @@
+dialog {
+  /* display: block; */
+  position: absolute;
+  z-index: 99;
+  border: 0;
+}
+
+dialog::backdrop {
+  color: black;
+}

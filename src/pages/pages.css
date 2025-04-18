@@ -31,6 +31,16 @@ a {
   text-decoration: none;
 }
 
+aside {
+  align-items: stretch;
+  height: calc(100vh - 196px);
+  margin-bottom: 8px;
+}
+
+.tree-view {
+  height: 100%;
+}
+
 @media only screen and (max-width: 640px) {
   .home-container {
     display: block;
@@ -49,5 +59,9 @@ a {
     display: grid;
     grid-template-columns: auto;
     row-gap: 8px;
+  }
+
+  aside {
+    height: 100%;
   }
 }

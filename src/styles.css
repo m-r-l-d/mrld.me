@@ -29,6 +29,22 @@ body {
   overflow-x: hidden;
 }
 
+.title-box {
+  background: silver;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px grey, inset 2px 2px white;
+  display: block;
+  margin: 12px 6px;
+  padding: 0px 6px 2px 6px;
+}
+
+.title-box-title {
+  position: relative;
+  top: -6px;
+  background-color: silver;
+  width: fit-content;
+  padding: 1px;
+}
+
 h1,
 h2,
 h3,

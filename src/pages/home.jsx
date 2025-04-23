@@ -17,16 +17,21 @@ function Home() {
   };
 
   return (
-    <div className="home-container">
+    <div className="panel-container">
       <div className="home-left sunken-panel"></div>
       <div className="home-right">
         <h2>mrld.me</h2>
         <p>
-          This is a place where you can check out some of my stuff. I do a lot
-          of stuff!
+          This is a place where you can check out some of my stuff. Click on the
+          tabs at the top of the window or the links below to navigate between
+          pages.
         </p>
+        <p>This page is still heavily under construction!</p>
         <div className="link-container">
-          <LinkPanel title="Gallery" to="/gallery" />
+          <LinkPanel title="Traditional Art" to="/traditional-art" />
+          <LinkPanel title="Digital Art" to="/digital-art" />
+          <LinkPanel title="Microscopy" to="/microscopy" />
+          <LinkPanel title="Lapidary" to="/lapidary" />
           <LinkPanel title="Tools" to="/tools" />
         </div>
       </div>
@@ -35,18 +40,3 @@ function Home() {
 }
 
 export default Home;
-
-{
-  /* <div>
-            <a href="/gallery" className="">Gallery</a>
-          </div>
-          <Link to="/tools" className="window">
-            <h1 className="">Tools</h1>
-          </Link>
-          <Link to="/about" className="window">
-            <h1 className="">About</h1>
-          </Link>
-        <div className="link-container">
-          
-        </div> */
-}

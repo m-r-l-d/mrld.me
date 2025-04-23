@@ -16,17 +16,12 @@ export default function GalleryDialog({ ref, setInactive, imagePath }) {
         </div>
       </div>
       <div className="window-body">
-        <h3>Gallery</h3>
         <div className="sunken-panel">
-          <img
-            src={imagePath}
-            alt="under construction"
-            // style={{ minWidth: "calc(100vw - 40px)", maxWidth: "100%", margin: "auto" }}
-          />
+          <img src={imagePath} alt="under construction" />
         </div>
       </div>
       <div className="button-wrapper">
-        <button
+        {/* <button
           onClick={() => {
             setInactive(false);
             ref.current.close();
@@ -35,7 +30,12 @@ export default function GalleryDialog({ ref, setInactive, imagePath }) {
           autoFocus
         >
           OK
-        </button>
+        </button> */}
+      </div>
+      <div className="status-bar">
+        <p className="status-bar-field">Maybe image description will go here?</p>
+        <p className="status-bar-field">1 / 1</p>
+        <p className="status-bar-field">Size: 100mb</p>
       </div>
     </dialog>
   );

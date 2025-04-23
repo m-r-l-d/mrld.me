@@ -29,8 +29,17 @@ function Layout() {
             <li role="tab" aria-selected={pathname === "/"}>
               <Link to="/">Home</Link>
             </li>
-            <li role="tab" aria-selected={pathname === "/gallery"}>
-              <Link to="gallery">Gallery</Link>
+            <li role="tab" aria-selected={pathname === "/traditional-art"}>
+              <Link to="traditional-art">Traditional Art</Link>
+            </li>
+            <li role="tab" aria-selected={pathname === "/digital-art"}>
+              <Link to="digital-art">Digital Art</Link>
+            </li>
+            <li role="tab" aria-selected={pathname === "/microscopy"}>
+              <Link to="microscopy">Microscopy</Link>
+            </li>
+            <li role="tab" aria-selected={pathname === "/lapidary"}>
+              <Link to="lapidary">Lapidary</Link>
             </li>
             <li role="tab" aria-selected={pathname === "/tools"}>
               <Link to="tools">Tools</Link>

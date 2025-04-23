@@ -1,9 +1,11 @@
+import "./pages.css";
 import construction from "../assets/img/construction.svg";
 
-function Tools() {
+function Lapidary() {
+
   return (
     <>
-      <h3>Tools</h3>
+      <h3>Lapidary</h3>
       <img
         src={construction}
         className="construction"
@@ -14,4 +16,4 @@ function Tools() {
   );
 }
 
-export default Tools;
+export default Lapidary;

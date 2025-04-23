@@ -8,3 +8,13 @@ dialog {
 dialog::backdrop {
   color: black;
 }
+
+dialog > img {
+  width: 592px;
+}
+
+@media only screen and (max-width: 640px) {
+  dialog > img {
+    width: calc(100vw - 40px);
+  }
+}

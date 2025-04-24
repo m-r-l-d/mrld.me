@@ -1,8 +1,9 @@
-import { useOutletContext } from "react-router";
+import { Link, useOutletContext } from "react-router";
 // import construction from "../assets/img/construction.svg";
 import { useRef, useState } from "react";
 import { GalleryDialog } from "../components/dialogs";
 import "./pages.css";
+import { pageData } from "../data/art";
 
 function Art() {
   const [currentImage, setCurrentImage] = useState(
@@ -10,8 +11,6 @@ function Art() {
   );
   const { setInactive } = useOutletContext();
   const ref = useRef(null);
-
-  <GalleryDialog ref={ref} setInactive={setInactive} />;
 
   const dialogProps = {
     ref,
@@ -27,24 +26,48 @@ function Art() {
         <div className="digital-art-left">
           <ul className="tree-view">
             <li>
-              Digital Art
+              <Link to="/art/digital-art">Digital Art</Link>
               <ul>
                 <li>
-                  Datamosh
+                  <Link to="/art/digital-art/datamosh">Datamosh</Link>
                   <ul>
-                    <li>Avidemux</li>
-                    <li>Audacity</li>
-                    <li>Pixelsorting</li>
+                    <li>
+                      <Link to="/art/digital-art/datamosh/avidemux">
+                        Avidemux
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/art/digital-art/datamosh/audacity">
+                        Audacity
+                      </Link>
+                    </li>
                   </ul>
                 </li>
                 <li>
-                  Misc generative art
+                  <Link to="/art/digital-art/misc-generative-art">
+                    Misc generative art
+                  </Link>
                   <ul>
-                    <li>Friendlybot</li>
+                    <li>
+                      <Link to="/art/digital-art/misc-generative-art/friendlybot">
+                        Friendlybot
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/art/digital-art/misc-generative-art/pixelsorting">
+                        Pixelsorting
+                      </Link>
+                    </li>
                   </ul>
                 </li>
-                <li>Illustration</li>
-                <li>Graphic design</li>
+                <li>
+                  <Link to="/art/digital-art/illustration">Illustration</Link>
+                </li>
+                <li>
+                  <Link to="/art/digital-art/graphic-design">
+                    Graphic design
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>

@@ -4,7 +4,7 @@ export default function GalleryDialog({ ref, setInactive, imagePath }) {
   return (
     <dialog ref={ref} className="window dialog">
       <div className="title-bar">
-        <div className="title-bar-text">Image Viewer - mrld.me</div>
+        <div className="title-bar-text">View Image - mrld.me</div>
         <div className="title-bar-controls">
           <button
             aria-label="Close"

@@ -29,16 +29,16 @@ function Layout() {
             <li role="tab" aria-selected={pathname === "/"}>
               <Link to="/">Home</Link>
             </li>
-            <li role="tab" aria-selected={pathname === "/art"}>
+            <li role="tab" aria-selected={pathname.startsWith("/art")}>
               <Link to="art">Art</Link>
             </li>
-            <li role="tab" aria-selected={pathname === "/microscopy"}>
+            <li role="tab" aria-selected={pathname.startsWith("/microscopy")}>
               <Link to="microscopy">Microscopy</Link>
             </li>
-            <li role="tab" aria-selected={pathname === "/lapidary"}>
+            <li role="tab" aria-selected={pathname.startsWith("/lapidary")}>
               <Link to="lapidary">Lapidary</Link>
             </li>
-            <li role="tab" aria-selected={pathname === "/tools"}>
+            <li role="tab" aria-selected={pathname.startsWith("/tools")}>
               <Link to="tools">Tools</Link>
             </li>
           </menu>

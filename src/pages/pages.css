@@ -54,6 +54,11 @@ aside {
   height: 100%;
 }
 
+.tree-view > li > .highlighted {
+  background-color: navy;
+  color: #fff;
+}
+
 @media only screen and (max-width: 640px) {
   .column-container {
     flex-direction: column;

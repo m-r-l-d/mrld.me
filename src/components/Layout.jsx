@@ -29,11 +29,8 @@ function Layout() {
             <li role="tab" aria-selected={pathname === "/"}>
               <Link to="/">Home</Link>
             </li>
-            <li role="tab" aria-selected={pathname === "/traditional-art"}>
-              <Link to="traditional-art">Traditional Art</Link>
-            </li>
-            <li role="tab" aria-selected={pathname === "/digital-art"}>
-              <Link to="digital-art">Digital Art</Link>
+            <li role="tab" aria-selected={pathname === "/art"}>
+              <Link to="art">Art</Link>
             </li>
             <li role="tab" aria-selected={pathname === "/microscopy"}>
               <Link to="microscopy">Microscopy</Link>

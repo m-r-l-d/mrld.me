@@ -1,11 +1,11 @@
-.panel-container {
+.column-container {
   display: flex;
+  height: calc(100vh - 182px);
 }
 
 .home-left {
   flex: 1;
   max-width: 200px;
-  height: calc(100vh - 182px);
   background-image: url("../assets/img/home/tools.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,15 +14,17 @@
   background-color: black;
 }
 
-.home-right {
-  flex: 2;
+.column-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding-left: 8px;
+  height: 100%;
 }
 
 .digital-art-left {
   flex: 1;
   max-width: 200px;
-  height: calc(100vh - 196px);
 }
 
 .link-container {
@@ -31,6 +33,11 @@
   grid-template-rows: auto;
   column-gap: 8px;
   row-gap: 8px;
+}
+
+.gallery-container {
+  flex: 1;
+  padding: 6px;
 }
 
 a {
@@ -48,8 +55,8 @@ aside {
 }
 
 @media only screen and (max-width: 640px) {
-  .panel-container {
-    display: block;
+  .column-container {
+    flex-direction: column;
   }
 
   .home-left {
@@ -57,28 +64,20 @@ aside {
     max-width: 100%;
   }
 
-  .home-right {
+  .column-right {
     padding-left: 0;
   }
 
   .digital-art-left {
-    height: 100%;
     max-width: 100%;
-  }
-
-  .digital-art-right {
-    padding-left: 0;
+    flex: none;
+    margin-bottom: 12px;
   }
 
   .link-container {
     display: grid;
     grid-template-columns: auto;
     row-gap: 8px;
-  }
-
-  .gallery-panel {
-    width: 100%;
-    height: 100%;
   }
 
   aside {

@@ -17,9 +17,9 @@ function Home() {
   };
 
   return (
-    <div className="panel-container">
+    <div className="column-container">
       <div className="home-left sunken-panel"></div>
-      <div className="home-right">
+      <div className="column-right">
         <h2>mrld.me</h2>
         <p>
           This is a place where you can check out some of my stuff. Click on the
@@ -28,8 +28,7 @@ function Home() {
         </p>
         <p>This page is still heavily under construction!</p>
         <div className="link-container">
-          <LinkPanel title="Traditional Art" to="/traditional-art" />
-          <LinkPanel title="Digital Art" to="/digital-art" />
+          <LinkPanel title="Art" to="/art" />
           <LinkPanel title="Microscopy" to="/microscopy" />
           <LinkPanel title="Lapidary" to="/lapidary" />
           <LinkPanel title="Tools" to="/tools" />

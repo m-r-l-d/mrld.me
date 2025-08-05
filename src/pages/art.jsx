@@ -3,20 +3,33 @@ import { Link, useOutletContext } from "react-router";
 import { useRef, useState } from "react";
 import { GalleryDialog } from "../components/dialogs";
 import "./pages.css";
-import { pageData } from "../data/art";
+import { pageData, treeData } from "../data/art";
+
+function TreeLink({ topic, link, subtopics }) {
+  return (
+    <li key={topic}>
+      <Link to={link}>{topic}</Link>
+      {subtopics?.length > 0 && (
+        <ul>{subtopics.map((innerTopic) => TreeLink(innerTopic))}</ul>
+      )}
+    </li>
+  );
+}
 
 function Art() {
-  const [currentImage, setCurrentImage] = useState(
-    "/src/assets/img/construction.svg"
-  );
+  const [currentImage, setCurrentImage] = useState(pageData["datamosh"]["gallery"][0]);
   const { setInactive } = useOutletContext();
   const ref = useRef(null);
+
+  const currentPageData = pageData[window.location.pathname.split("/").at(-1)];
+  const galleryLength = currentPageData.gallery?.length
 
   const dialogProps = {
     ref,
     setInactive,
-    imagePath: currentImage,
+    currentImage,
     setCurrentImage,
+    galleryLength
   };
 
   return (
@@ -25,68 +38,36 @@ function Art() {
       <div className="column-container">
         <div className="digital-art-left">
           <ul className="tree-view">
-            <li>
-              <Link to="/art/digital-art">Digital Art</Link>
-              <ul>
-                <li>
-                  <Link to="/art/digital-art/datamosh">Datamosh</Link>
-                  <ul>
-                    <li>
-                      <Link to="/art/digital-art/datamosh/avidemux">
-                        Avidemux
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/art/digital-art/datamosh/audacity">
-                        Audacity
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link to="/art/digital-art/misc-generative-art">
-                    Misc generative art
-                  </Link>
-                  <ul>
-                    <li>
-                      <Link to="/art/digital-art/misc-generative-art/friendlybot">
-                        Friendlybot
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/art/digital-art/misc-generative-art/pixelsorting">
-                        Pixelsorting
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link to="/art/digital-art/illustration">Illustration</Link>
-                </li>
-                <li>
-                  <Link to="/art/digital-art/graphic-design">
-                    Graphic design
-                  </Link>
-                </li>
-              </ul>
-            </li>
+            {treeData.map((topic) => TreeLink(topic))}
           </ul>
         </div>
         <div className="column-right">
           <div className="title-box">
-            <div className="title-box-title">Digital Art</div>
-            <p>Testing out an interface for viewing groups of photos.</p>
-            <p>Open the image viewer using the button below:</p>
+            <div className="title-box-title">{currentPageData.title}</div>
+            <p>{currentPageData.description}</p>
           </div>
           <div className="sunken-panel gallery-container">
-            <button
-              onClick={() => {
-                ref.current.showModal();
-                setInactive(true);
-              }}
-            >
-              Gallery
-            </button>
+            {currentPageData.links?.map((item) => (
+              <>
+                <Link to={item.link}>
+                  <p>{item.title}</p>
+                </Link>
+              </>
+            ))}
+            {currentPageData.gallery?.map((item) => (
+              <img
+                className="gallery-thumbnail"
+                src={item.thumbnail}
+                width={100}
+                height={100}
+                // key={item.title}
+                onClick={() => {
+                  setCurrentImage(item)
+                  ref.current.showModal();
+                  setInactive(true);
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>

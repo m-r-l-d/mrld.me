@@ -6,7 +6,7 @@
 .home-left {
   flex: 1;
   max-width: 200px;
-  background-image: url("../assets/img/home/tools.png");
+  background-image: url("https://mrld-remote-img-test.s3.us-east-2.amazonaws.com/tools.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -37,7 +37,16 @@
 
 .gallery-container {
   flex: 1;
+  display: grid;
   padding: 6px;
+  gap: 6px;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-rows: repeat(auto-fit, 100px);
+}
+
+.gallery-thumbnail {
+  width: 100px;
+  height: 100px;
 }
 
 a {
@@ -51,7 +60,7 @@ aside {
 }
 
 .tree-view {
-  height: 100%;
+  height: calc(100% - 12px);
 }
 
 .tree-view > li > .highlighted {
@@ -84,6 +93,20 @@ aside {
     grid-template-columns: auto;
     row-gap: 8px;
   }
+
+  .gallery-container {
+  flex: 1;
+  display: grid;
+  padding: 6px;
+  gap: 6px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.gallery-thumbnail {
+  width: 100%;
+  height: 100%;
+}
 
   aside {
     height: 100%;

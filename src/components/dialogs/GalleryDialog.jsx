@@ -1,6 +1,12 @@
 import "./dialogs.css";
 
-export default function GalleryDialog({ ref, setInactive, imagePath }) {
+export default function GalleryDialog({
+  ref,
+  setInactive,
+  currentImage,
+  setCurrentImage,
+  galleryLength,
+}) {
   return (
     <dialog ref={ref} className="window dialog">
       <div className="title-bar">
@@ -10,14 +16,18 @@ export default function GalleryDialog({ ref, setInactive, imagePath }) {
             aria-label="Close"
             onClick={() => {
               setInactive(false);
+              setCurrentImage(null);
               ref.current.close();
             }}
           ></button>
         </div>
       </div>
       <div className="window-body">
-        <div className="sunken-panel">
-          <img src={imagePath} alt="under construction" />
+        <div
+          className="sunken-panel"
+          style={{ backgroundColor: "silver", display: "flex", minHeight: "60vh"}}
+        >
+          <img src={currentImage?.image || null} alt="under construction" />
         </div>
       </div>
       <div className="button-wrapper">
@@ -33,8 +43,8 @@ export default function GalleryDialog({ ref, setInactive, imagePath }) {
         </button> */}
       </div>
       <div className="status-bar">
-        <p className="status-bar-field">Maybe image description will go here?</p>
-        <p className="status-bar-field">1 / 1</p>
+        <p className="status-bar-field">{currentImage?.description || null}</p>
+        <p className="status-bar-field">1 / {galleryLength}</p>
         <p className="status-bar-field">Size: 100mb</p>
       </div>
     </dialog>

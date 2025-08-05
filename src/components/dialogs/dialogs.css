@@ -3,14 +3,25 @@ dialog {
   position: absolute;
   z-index: 99;
   border: 0;
+  width: 80vw;
+  height: 70vh;
+  overflow: hidden;
 }
 
 dialog::backdrop {
   color: black;
 }
 
-dialog > img {
-  width: 592px;
+image-container {
+  display: flex;
+  justify-content: center;
+}
+
+dialog > div > div > img {
+  max-height: 60vh;
+  max-width: 100%;
+  margin: auto;
+  /* display: inline-block; */
 }
 
 @media only screen and (max-width: 640px) {
